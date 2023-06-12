@@ -1,0 +1,25 @@
+﻿<Window x:Class="GitRepoManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GitRepoManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Initialized="Window_Initialized">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="listBoxLocalRepo" Grid.Column="0" MouseDoubleClick="listBoxLocalRepo_MouseDoubleClick"/>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <Button x:Name="buttonRefreshRepoList" Content="Refresh" Margin="5" Padding="5" Click="buttonRefreshRepoList_Click"/>
+
+            <Button x:Name="buttonShowInExplorer" Content="Show in Explorer" Margin="5" Padding="5" Click="buttonShowInExplorer_Click"/>
+            <Button x:Name="buttonOpenInCode" Content="Open in VSCode" Margin="5" Padding="5" Click="buttonOpenInCode_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
