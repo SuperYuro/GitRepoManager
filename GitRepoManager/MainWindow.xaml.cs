@@ -86,7 +86,7 @@ namespace GitRepoManager
         {
             string ghqRootPath = getGhqRoot();
 
-            var selectedItem=listBoxLocalRepo.SelectedItem;
+            var selectedItem = listBoxLocalRepo.SelectedItem;
             if (selectedItem == null) return ghqRootPath;
 
             string repoPath = selectedItem.ToString().Replace("/", "\\");
@@ -95,14 +95,13 @@ namespace GitRepoManager
             return repoPath;
         }
 
-        private void Open(string app,string args)
+        private void Open(string app, string args)
         {
-            using(Process  process = new Process())
+            using (Process process = new Process())
             {
                 process.StartInfo.UseShellExecute = true;
                 process.StartInfo.FileName = app;
                 process.StartInfo.Arguments = args;
-                process.StartInfo.CreateNoWindow = true;
                 process.Start();
             }
         }
@@ -128,6 +127,12 @@ namespace GitRepoManager
         private void buttonOpenInCode_Click(object sender, RoutedEventArgs e)
         {
             openInCode();
+        }
+
+        private void buttonOpenInTerminal_Click(object sender, RoutedEventArgs e)
+        {
+            string repoPath = "-NoExit -wd " + getRepositoryPath();
+            Open("pwsh", repoPath);
         }
     }
 }

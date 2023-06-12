@@ -18,6 +18,7 @@
         <StackPanel Orientation="Vertical" Grid.Column="1">
             <Button x:Name="buttonRefreshRepoList" Content="Refresh" Margin="5" Padding="5" Click="buttonRefreshRepoList_Click"/>
 
+            <Button x:Name="buttonOpenInTerminal" Content="Open in Terminal" Margin="5" Padding="5" Click="buttonOpenInTerminal_Click"/>
             <Button x:Name="buttonShowInExplorer" Content="Open in Explorer" Margin="5" Padding="5" Click="buttonShowInExplorer_Click"/>
             <Button x:Name="buttonOpenInCode" Content="Open in VSCode" Margin="5" Padding="5" Click="buttonOpenInCode_Click"/>
         </StackPanel>
