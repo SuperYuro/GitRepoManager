@@ -10,4 +10,5 @@ Management local repository cloned by ghq
 
 ## TODO
 - Create local repository
+- Clone remote repository
 - Delete local repository
